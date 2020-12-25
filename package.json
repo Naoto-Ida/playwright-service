@@ -1,0 +1,23 @@
+{
+  "name": "playwright-service",
+  "description": "Dockerization of Playwright server",
+  "private": true,
+  "scripts": {
+    "build:ts": "yarn tsc --build",
+    "start": "node lib/launch.js",
+    "build:img": "docker build . -t playwright-service:latest"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.9",
+    "@types/node-fetch": "2.5.7",
+    "typescript": "3.9.7"
+  },
+  "dependencies": {
+    "chalk": "4.1.0",
+    "express": "4.17.1",
+    "http-proxy-middleware": "1.0.6",
+    "node-fetch": "2.6.1",
+    "playwright-chromium": "1.7.1",
+    "playwright-core": "1.7.1"
+  }
+}

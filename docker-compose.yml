@@ -1,0 +1,8 @@
+version: "3"
+services:
+  playwright:
+    ports:
+      - "8080:8080"
+    image: playwright-service:latest
+    environment:
+      - DEBUG=express:*
